@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="115.83" height="115.83" viewBox="0 0 115.83 115.83" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask Container">
+<circle id="Ellipse 30473" cx="57.9149" cy="57.9149" r="57.9149" fill="#6656F7"/>
+<g id="Mask group">
+<mask id="mask0_0_889" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="14" y="14" width="88" height="88">
+<circle id="Ellipse 30475" cx="57.9109" cy="57.9087" r="43.4361" fill="white"/>
+</mask>
+<g mask="url(#mask0_0_889)">
+<circle id="Ellipse 30482" cx="57.9109" cy="57.9087" r="43.4361" fill="white"/>
+<path id="Subtract" d="M59.3634 14.4765C74.2898 14.4767 86.3898 26.5774 86.3898 41.5038C86.3896 56.4301 74.2897 68.53 59.3634 68.5302C54.8792 68.5302 50.6505 67.4365 46.9279 65.5038L48.4825 59.706C49.7299 55.051 50.3541 52.7232 49.0763 51.4452C47.7983 50.1672 45.47 50.7906 40.8146 52.038L35.1652 53.5517C33.3555 49.9241 32.3361 45.8332 32.3361 41.5038C32.3361 26.5773 44.4368 14.4765 59.3634 14.4765Z" fill="#362F73"/>
+<rect id="Rounded Rectangle" x="0.0938759" y="90.3085" width="106.66" height="59.8454" transform="rotate(-10 0.0938759 90.3085)" fill="#6656F7"/>
+</g>
+</g>
+</g>
+</svg>
