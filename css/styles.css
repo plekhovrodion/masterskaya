@@ -240,7 +240,9 @@ p {
   width: 100%;
   height: 320px;
   min-height: 320px;
+  margin-top: 16px;
   overflow: visible;
+  transform: translateY(56px);
   z-index: 1;
 }
 
@@ -271,6 +273,40 @@ p {
   display: block;
   width: 220px;
   height: auto;
+  transform-origin: center bottom;
+  will-change: transform;
+}
+
+@keyframes hero-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-card {
+    animation:
+      hero-card-enter 0.9s cubic-bezier(0.22, 1, 0.36, 1) both,
+      hero-card-float 4.8s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.14s), calc(0.95s + var(--i) * 0.18s);
+  }
 }
 
 /* Games */
@@ -429,7 +465,6 @@ p {
   aspect-ratio: 1200 / 600;
   container-type: inline-size;
   position: relative;
-  perspective: 1400px;
 }
 
 .skills__scene {
@@ -440,7 +475,6 @@ p {
   height: 600px;
   transform-origin: top left;
   transform: scale(calc(100cqw / 1200px));
-  transform-style: preserve-3d;
 }
 
 .skills__wave {
@@ -458,7 +492,6 @@ p {
   font-weight: 800;
   line-height: 0.9;
   text-align: center;
-  transform-style: preserve-3d;
 }
 
 .blob p {
@@ -607,44 +640,6 @@ p {
   color: var(--deep);
   font-size: 52px;
   white-space: nowrap;
-}
-
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .blob {
-    transition:
-      translate 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .skills__viewport:hover .blob-music {
-    translate: 0 0 56px;
-    transform: rotateY(-14deg);
-  }
-
-  .skills__viewport:hover .blob-imagine {
-    translate: 0 0 40px;
-    transform: rotateX(8deg);
-  }
-
-  .skills__viewport:hover .blob-move {
-    translate: 0 0 48px;
-    transform: rotateY(12deg);
-  }
-
-  .skills__viewport:hover .blob-create {
-    translate: 0 0 24px;
-    transform: rotateX(4deg);
-  }
-
-  .skills__viewport:hover .blob-read {
-    translate: 0 0 64px;
-    transform: rotateX(-6deg);
-  }
-
-  .skills__viewport:hover .blob-think {
-    translate: 0 0 40px;
-    transform: rotateY(10deg);
-  }
 }
 
 /* Offer */
@@ -849,6 +844,8 @@ p {
   .cast-scale {
     height: 220px;
     min-height: 220px;
+    margin-top: 8px;
+    transform: translateY(32px);
   }
 
   .hero__cast {
