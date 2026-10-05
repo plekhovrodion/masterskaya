@@ -3,7 +3,7 @@
   src: url("../fonts/OceanicGroteskCondensed-Extrabold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   src: url("../fonts/FactorA-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   src: url("../fonts/FactorA-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 :root {
@@ -300,7 +300,7 @@ p {
   z-index: 2;
   flex: none;
   width: min(1280px, 100%);
-  margin: 0 auto clamp(16px, 3dvh, 56px);
+  margin: 0 auto 32px;
   padding: 0 40px;
   background: #fff;
 }
@@ -879,7 +879,7 @@ p {
 
   .games .section-title {
     padding: 0 16px;
-    margin-bottom: clamp(16px, 3dvh, 40px);
+    margin-bottom: 32px;
     font-size: 48px;
   }
 
