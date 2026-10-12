@@ -840,16 +840,6 @@ p {
   outline-offset: 4px;
 }
 
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .game {
-    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .game:hover {
-    transform: translateY(-6px);
-  }
-}
-
 .badge {
   display: inline-flex;
   align-items: center;
