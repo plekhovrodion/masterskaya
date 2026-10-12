@@ -111,9 +111,20 @@
             <span>в&nbsp;одной подписке</span>
           </h2>
           <div class="games__track" data-games-track>
-          <a class="game" href="#">
+          <article class="game">
             <div class="game__media">
-              <img class="game__shot" src="../assets/game-1.png" alt="" />
+              <video
+                class="game__shot"
+                src="../assets/game-1.mp4"
+                poster="../assets/game-1.png"
+                controls
+                muted
+                loop
+                playsinline
+                preload="none"
+                data-game-video
+                aria-label="Дракон Картон — игра"
+              ></video>
             </div>
             <div class="game__body">
               <h3 class="game__title">
@@ -124,10 +135,21 @@
                 мышление
               </p>
             </div>
-          </a>
-          <a class="game" href="#">
+          </article>
+          <article class="game">
             <div class="game__media">
-              <img class="game__shot" src="../assets/game-2.png" alt="" />
+              <video
+                class="game__shot"
+                src="../assets/game-2.mp4"
+                poster="../assets/game-2.png"
+                controls
+                muted
+                loop
+                playsinline
+                preload="none"
+                data-game-video
+                aria-label="Спасение зверят — игра"
+              ></video>
             </div>
             <div class="game__body">
               <h3 class="game__title">
@@ -138,10 +160,21 @@
                 эмоции через интонацию
               </p>
             </div>
-          </a>
-          <a class="game" href="#">
+          </article>
+          <article class="game">
             <div class="game__media">
-              <img class="game__shot" src="../assets/game-3.png" alt="" />
+              <video
+                class="game__shot"
+                src="../assets/game-3.mp4"
+                poster="../assets/game-3.png"
+                controls
+                muted
+                loop
+                playsinline
+                preload="none"
+                data-game-video
+                aria-label="Долой тучи! — игра"
+              ></video>
             </div>
             <div class="game__body">
               <h3 class="game__title">
@@ -152,8 +185,8 @@
                 в&nbsp;пении
               </p>
             </div>
-          </a>
-          <a class="game" href="#">
+          </article>
+          <article class="game">
             <div class="game__media">
               <img class="game__shot" src="../assets/game-4.gif" alt="" />
             </div>
@@ -167,19 +200,20 @@
               </h3>
               <p>Ребёнок читает вслух, рисует и&nbsp;ловит героев руками. Развивает понимание текста и&nbsp;воображение</p>
             </div>
-          </a>
-          <a class="game" href="#">
+          </article>
+          <article class="game">
             <div class="game__media">
               <video
                 class="game__shot"
                 src="../assets/game-5.mp4"
                 poster="../assets/game-5.png"
-                autoplay
+                controls
                 muted
                 loop
                 playsinline
-                preload="metadata"
-                aria-hidden="true"
+                preload="none"
+                data-game-video
+                aria-label="По следам животных — игра"
               ></video>
             </div>
             <div class="game__body">
@@ -195,7 +229,7 @@
                 об&nbsp;окружающем мире
               </p>
             </div>
-          </a>
+          </article>
           </div>
         </div>
       </section>
@@ -267,6 +301,7 @@
 
     <script src="../js/hero-marquee.js"></script>
     <script src="../js/carousel.js"></script>
+    <script src="../js/videos.js"></script>
     <script src="../js/reveal.js"></script>
   </body>
 </html>
