@@ -677,7 +677,7 @@ p {
 }
 
 .blob-music {
-  left: 148px;
+  left: 96px;
   top: 58px;
   z-index: 3;
   display: flex;
@@ -705,7 +705,7 @@ p {
 }
 
 .blob-imagine {
-  left: 730px;
+  left: 784px;
   top: -8px;
   z-index: 2;
   width: 389px;
