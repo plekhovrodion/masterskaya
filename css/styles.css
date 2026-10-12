@@ -820,6 +820,13 @@ p {
   white-space: nowrap;
 }
 
+@media (min-width: 768px) {
+  .blob-music,
+  .blob-imagine {
+    z-index: 5;
+  }
+}
+
 /* Offer */
 
 .offer {
