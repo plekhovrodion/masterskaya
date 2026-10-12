@@ -790,11 +790,9 @@ p {
 
 .game__media {
   position: relative;
-  flex: 0 1 auto;
+  flex: none;
   width: 100%;
-  min-height: 0;
-  aspect-ratio: 16 / 9;
-  max-height: 576px;
+  height: clamp(220px, calc(92dvh - 290px), 576px);
   overflow: hidden;
   border-radius: 16px;
   background: #f3f0ff;
@@ -1352,8 +1350,8 @@ p {
   }
 
   .game__media {
+    height: auto;
     aspect-ratio: 328 / 400;
-    max-height: none;
   }
 
   .game__shot {
@@ -1722,5 +1720,10 @@ p {
   .game__shot,
   .blob {
     transition: none;
+  }
+
+  .game__media {
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 }
