@@ -1206,7 +1206,7 @@ p {
 @media (max-width: 767px) {
   .hero {
     gap: 24px;
-    height: 100dvh;
+    height: auto;
     min-height: 100dvh;
     padding: 88px 16px 72px;
   }
@@ -1251,6 +1251,10 @@ p {
   }
 
   .hero__lead {
+    font-size: 20px;
+  }
+
+  .hero__lead br {
     display: none;
   }
 
