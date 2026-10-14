@@ -1344,8 +1344,7 @@ p {
   }
 
   .game__media {
-    height: auto;
-    aspect-ratio: 328 / 400;
+    height: clamp(140px, calc(100dvh - 430px), 400px);
   }
 
   .game__shot {
