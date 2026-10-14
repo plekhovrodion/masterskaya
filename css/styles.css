@@ -1408,12 +1408,12 @@ p {
 
   .skills__viewport {
     width: min(328px, 100%);
-    aspect-ratio: 328 / 778;
+    aspect-ratio: 328 / 808;
   }
 
   .skills__scene {
     width: 328px;
-    height: 778px;
+    height: 808px;
     transform: scale(calc(100cqw / 328px));
   }
 
@@ -1442,7 +1442,7 @@ p {
 
   .blob-imagine {
     left: 76px;
-    top: 566px;
+    top: 596px;
     width: 278px;
     height: 252px;
   }
@@ -1520,7 +1520,7 @@ p {
 
   .blob-think {
     left: -9px;
-    top: 420px;
+    top: 452px;
     z-index: 3;
     width: 207px;
     height: 219px;
