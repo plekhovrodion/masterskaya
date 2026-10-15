@@ -860,7 +860,7 @@ p {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 0 40px 200px;
+  padding: 40px 40px 200px;
 }
 
 .skills .section-title {
@@ -1401,7 +1401,7 @@ p {
   }
 
   .skills {
-    padding: 0 16px 140px;
+    padding: 56px 16px 140px;
   }
 
   .skills .section-title {
