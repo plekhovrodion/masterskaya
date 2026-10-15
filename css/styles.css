@@ -1325,10 +1325,11 @@ p {
   }
 
   .games__pin {
+    position: static;
     height: auto;
     max-height: none;
-    padding-top: 16px;
-    padding-bottom: 24px;
+    overflow: visible;
+    padding: 0;
   }
 
   .games .section-title {
@@ -1338,16 +1339,32 @@ p {
   }
 
   .games__track {
-    gap: 24px;
+    gap: 16px;
+    width: auto;
     padding-inline: 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 16px;
+    scrollbar-width: none;
+    touch-action: pan-x pan-y;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .games__track::-webkit-scrollbar {
+    display: none;
   }
 
   .game {
-    flex-basis: calc(100vw - 32px);
+    flex-basis: calc(100vw - 56px);
+    height: auto;
+    scroll-snap-align: start;
   }
 
   .game__media {
-    height: clamp(140px, calc(100dvh - 430px), 400px);
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .game__shot {
@@ -1375,13 +1392,9 @@ p {
     padding: 21px !important;
   }
 
-  .game:nth-child(2) .game__shot {
-    object-fit: cover;
-  }
-
   .game__body {
     gap: 8px;
-    margin-top: min(24px, 3dvh);
+    margin-top: 16px;
   }
 
   .game__title {

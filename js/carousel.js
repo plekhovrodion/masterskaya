@@ -1,4 +1,7 @@
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileLayout = window.matchMedia("(max-width: 767px)");
+
+const usesNativeScroll = () => reducedMotion.matches || mobileLayout.matches;
 
 function startGamesScroll() {
   const section = document.querySelector(".games");
@@ -20,7 +23,7 @@ function startGamesScroll() {
   };
 
   const measure = () => {
-    if (reducedMotion.matches) {
+    if (usesNativeScroll()) {
       section.style.height = "";
       track.style.transform = "";
       return;
@@ -32,11 +35,12 @@ function startGamesScroll() {
 
   measure();
   window.addEventListener("scroll", () => {
-    if (reducedMotion.matches) return;
+    if (usesNativeScroll()) return;
     render();
   }, { passive: true });
   window.addEventListener("resize", measure);
   reducedMotion.addEventListener("change", measure);
+  mobileLayout.addEventListener("change", measure);
   track.querySelectorAll("img").forEach((img) => {
     if (!img.complete) img.addEventListener("load", measure, { once: true });
   });
