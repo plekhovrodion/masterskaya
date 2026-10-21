@@ -1867,7 +1867,7 @@ main:has(.why[hidden]) .skills {
   .hero__photo {
     --k: calc(100cqw / 700px);
     margin-inline: -16px;
-    aspect-ratio: 360 / 540;
+    aspect-ratio: 360 / 380;
   }
 
   .hero__photo-img {
