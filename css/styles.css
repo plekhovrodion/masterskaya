@@ -758,7 +758,7 @@ p {
 
 .game {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 7fr) minmax(0, 13fr);
   grid-template-areas: "body media";
   align-items: start;
   gap: 48px;
