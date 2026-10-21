@@ -144,7 +144,7 @@ p {
   column-gap: 8px;
   font-family: var(--display);
   font-weight: 800;
-  font-size: 72px;
+  font-size: 92px;
   line-height: 0.9;
   text-align: center;
   color: var(--deep);
@@ -759,7 +759,7 @@ p {
 
 .game {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
   grid-template-areas: "body media";
   align-items: center;
   gap: 64px;
@@ -779,7 +779,7 @@ p {
   position: relative;
   flex: none;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: 16px;
   background: #f3f0ff;
@@ -1132,62 +1132,21 @@ main:has(.why[hidden]) .skills {
 }
 
 .offer__includes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  max-width: 1040px;
-}
-
-.offer__includes-title {
+  max-width: 880px;
   font-family: var(--text);
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
   text-align: center;
   color: #fff;
 }
 
-.offer__games {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.offer__games li {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-radius: 100px;
-  background: #fff;
-  color: var(--deep);
-  font-family: var(--text);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.offer__games li.is-soon {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-
-.offer__games li span {
-  padding: 2px 10px;
-  border-radius: 100px;
-  background: rgba(255, 207, 36, 0.5);
-  color: #6b501a;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.offer__games li.is-soon span {
-  background: #ffe791;
+.offer__includes strong {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 /* Footer */
@@ -1273,7 +1232,7 @@ main:has(.why[hidden]) .skills {
   }
 
   .section-title {
-    font-size: 64px;
+    font-size: 72px;
   }
 
   .hero {
@@ -1382,7 +1341,7 @@ main:has(.why[hidden]) .skills {
 
   .why .section-title {
     margin-bottom: 32px;
-    font-size: 48px;
+    font-size: 56px;
   }
 
   .why__cards {
@@ -1405,7 +1364,7 @@ main:has(.why[hidden]) .skills {
 
   .games .section-title {
     margin-bottom: 32px;
-    font-size: 48px;
+    font-size: 56px;
   }
 
   .games__track {
@@ -1480,7 +1439,7 @@ main:has(.why[hidden]) .skills {
 
   .skills .section-title {
     margin-bottom: 40px;
-    font-size: 48px;
+    font-size: 56px;
   }
 
   .skills__viewport {
@@ -1623,14 +1582,13 @@ main:has(.why[hidden]) .skills {
     font-size: 56px;
   }
 
-  .offer__includes-title {
-    font-size: 20px;
-    line-height: 28px;
+  .offer__includes {
+    font-size: 18px;
   }
 
-  .offer__games li {
-    padding: 8px 16px;
-    font-size: 16px;
+  .offer__includes strong {
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .offer__cloud--left {
