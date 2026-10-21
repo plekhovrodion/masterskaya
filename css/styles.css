@@ -1767,7 +1767,7 @@ p {
   align-self: stretch;
   flex: none;
   margin-inline: -40px;
-  aspect-ratio: 1280 / 634;
+  aspect-ratio: 1280 / 720;
   overflow: hidden;
   container-type: inline-size;
 }
@@ -1886,7 +1886,7 @@ p {
   .hero__photo {
     --k: calc(100cqw / 700px);
     margin-inline: -16px;
-    aspect-ratio: 360 / 440;
+    aspect-ratio: 360 / 540;
   }
 
   .hero__photo-img {
@@ -1899,28 +1899,24 @@ p {
   right: 24px;
   bottom: 136px;
   z-index: 4;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  height: 48px;
-  padding: 0 20px 0 14px;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  padding: 0;
   border: 0;
-  border-radius: 12px;
+  border-radius: 20px;
   background: #fff;
   color: var(--deep);
-  font-family: var(--text);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(54, 47, 115, 0.3);
+  box-shadow: none;
   transition:
     transform 0.2s ease,
     background-color 0.2s ease;
 }
 
 .hero__sound:hover {
-  transform: translateY(-2px);
+  transform: scale(1.06);
 }
 
 .hero__sound:focus-visible {
@@ -1929,8 +1925,8 @@ p {
 }
 
 .hero__sound-icon {
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   background: currentColor;
   -webkit-mask: var(--icon) center / contain no-repeat;
   mask: var(--icon) center / contain no-repeat;
@@ -1945,7 +1941,13 @@ p {
   .hero__sound {
     right: 16px;
     bottom: 84px;
-    height: 44px;
-    padding: 0 16px 0 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+  }
+
+  .hero__sound-icon {
+    width: 34px;
+    height: 34px;
   }
 }
