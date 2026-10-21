@@ -739,53 +739,27 @@ p {
 /* Games */
 
 .games {
-  position: relative;
-  padding-top: 80px;
+  padding: 80px 40px 40px;
 }
 
 .games__pin {
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  height: 100dvh;
-  max-height: 100dvh;
-  overflow: hidden;
-  padding-top: 0;
-  padding-bottom: clamp(24px, 8dvh, 160px);
-  background: #fff;
-  overscroll-behavior-x: contain;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .games .section-title {
-  position: relative;
-  z-index: 2;
-  flex: none;
-  width: min(1280px, 100%);
-  margin: 0 auto 40px;
-  padding: 0 40px;
-  background: #fff;
+  margin: 0 0 56px;
 }
 
 .games__track {
   display: flex;
-  flex: 1 1 auto;
-  align-items: stretch;
-  min-height: 0;
-  gap: 32px;
-  width: max-content;
-  padding-inline: max(40px, calc((100vw - 1280px) / 2 + 40px));
-  will-change: transform;
-  touch-action: pan-y;
+  flex-direction: column;
+  gap: 80px;
 }
 
 .game {
   display: flex;
   flex-direction: column;
-  flex: 0 0 min(1024px, calc(100vw - 160px));
-  height: 100%;
-  min-height: 0;
   color: inherit;
   text-decoration: none;
 }
@@ -794,7 +768,7 @@ p {
   position: relative;
   flex: none;
   width: 100%;
-  height: clamp(220px, calc(92dvh - 290px), 576px);
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 16px;
   background: #f3f0ff;
@@ -812,7 +786,7 @@ p {
   flex: none;
   flex-direction: column;
   gap: 12px;
-  margin-top: min(32px, 3.6dvh);
+  margin-top: 24px;
 }
 
 .game__title {
@@ -840,6 +814,39 @@ p {
 .game:focus-visible {
   outline: 3px solid var(--purple);
   outline-offset: 4px;
+}
+
+.game__cta {
+  align-self: flex-start;
+  width: auto;
+  margin-top: 8px;
+  background: var(--purple);
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.game__cta:hover {
+  filter: brightness(1.08);
+}
+
+.game__cta:disabled {
+  background: #e7e3ff;
+  color: #9a93d4;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.why[hidden] {
+  display: none;
+}
+
+main:has(.why:not([hidden])) .skills > .skills__wave {
+  display: none;
+}
+
+main:has(.why[hidden]) .skills {
+  padding-bottom: 200px;
 }
 
 .badge {
@@ -1323,50 +1330,16 @@ p {
   }
 
   .games {
-    padding-top: 40px;
-  }
-
-  .games__pin {
-    position: static;
-    height: auto;
-    max-height: none;
-    overflow: visible;
-    padding: 0;
+    padding: 40px 16px 0;
   }
 
   .games .section-title {
-    padding: 0 16px;
     margin-bottom: 32px;
     font-size: 48px;
   }
 
   .games__track {
-    gap: 16px;
-    width: auto;
-    padding-inline: 16px;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 16px;
-    scrollbar-width: none;
-    touch-action: pan-x pan-y;
-    transform: none !important;
-    will-change: auto;
-  }
-
-  .games__track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .game {
-    flex-basis: calc(100vw - 56px);
-    height: auto;
-    scroll-snap-align: start;
-  }
-
-  .game__media {
-    height: auto;
-    aspect-ratio: 16 / 9;
+    gap: 56px;
   }
 
   .game__shot {
@@ -1399,6 +1372,11 @@ p {
     margin-top: 16px;
   }
 
+  .game__cta {
+    align-self: stretch;
+    width: auto;
+  }
+
   .game__title {
     flex-direction: column;
     align-items: flex-start;
@@ -1417,6 +1395,10 @@ p {
 
   .skills {
     padding: 56px 16px 56px;
+  }
+
+  main:has(.why[hidden]) .skills {
+    padding-bottom: 140px;
   }
 
   .skills .section-title {
@@ -1695,47 +1677,10 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .games {
-    height: auto !important;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 80px 40px 160px;
-  }
-
-  .games__pin {
-    position: static;
-    height: auto;
-    max-height: none;
-    overflow: visible;
-  }
-
-  .games .section-title {
-    width: auto;
-    padding: 0;
-  }
-
-  .games__track {
-    flex-direction: column;
-    width: auto;
-    padding: 0;
-    transform: none !important;
-  }
-
-  .game {
-    flex-basis: auto;
-    width: 100%;
-    height: auto;
-  }
-
   .game,
   .game__shot,
   .blob {
     transition: none;
-  }
-
-  .game__media {
-    height: auto;
-    aspect-ratio: 16 / 9;
   }
 }
 

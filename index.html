@@ -6,10 +6,10 @@
       document.documentElement.classList.add("js");
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Учи.Мастерская — онлайн-кружки для детей от 4 лет</title>
+    <title>Учи.Мастерская — развивающие игры для детей от 4 до 8 лет</title>
     <meta
       name="description"
-      content="Творчество, чтение, музыка, мышление и движение. Дома, без расписания и поездок."
+      content="Развивающие игры для детей от 4 до 8 лет: творчество, чтение, музыка, мышление и движение."
     />
     <link
       rel="preload"
@@ -21,61 +21,52 @@
     <link rel="preload" href="fonts/FactorA-Regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/FactorA-Bold.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/FactorA-Medium.otf" as="font" type="font/otf" crossorigin />
-    <link rel="stylesheet" href="css/styles.css?v=20261021j" />
+    <link rel="stylesheet" href="css/styles.css?v=20261022b" />
   </head>
   <body>
-    <header class="hero">
-      <img class="hero__bg" src="assets/hero-bg.svg" alt="" />
+    <header class="hero hero--photo">
       <img class="hero__logo" src="assets/logo-header.svg" alt="Учи.ру" />
 
       <div class="hero__top">
         <div class="hero__copy">
           <h1>
-            <span class="mark mark--red">Онлайн-кружки</span>
-            <span class="hero__for">для детей от&nbsp;4&nbsp;лет</span>
+            <span class="mark mark--red">Развивающие игры</span>
+            <span class="hero__for">для детей от&nbsp;4&nbsp;до&nbsp;8&nbsp;лет</span>
           </h1>
-          <p class="hero__lead">
-            Творчество, чтение, музыка, мышление и&nbsp;движение.<br />
-            Дома, без расписания и&nbsp;поездок
-          </p>
         </div>
         <div class="hero__actions">
-          <a class="btn btn--light" href="#games">Попробовать бесплатно</a>
+          <a class="btn btn--dark" href="#games">Попробовать бесплатно</a>
         </div>
       </div>
 
-      <div class="cast-scale">
-        <div class="hero__cast" aria-hidden="true">
-          <div class="hero-slot" style="--i: 0">
-            <div class="hero-card hero-card--dragon">
-              <img class="hero-card__char" src="assets/cards/char-dragon.svg" alt="" />
-              <p class="hero-card__label">Поделки и&nbsp;рисование</p>
-            </div>
-          </div>
-          <div class="hero-slot" style="--i: 1">
-            <div class="hero-card hero-card--help">
-              <img class="hero-card__char" src="assets/cards/char-help.svg" alt="" />
-              <p class="hero-card__label">Чтение и&nbsp;речь</p>
-            </div>
-          </div>
-          <div class="hero-slot" style="--i: 2">
-            <div class="hero-card hero-card--clouds">
-              <img class="hero-card__char" src="assets/cards/char-clouds.svg" alt="" />
-              <p class="hero-card__label">Музыка и&nbsp;пение</p>
-            </div>
-          </div>
-          <div class="hero-slot" style="--i: 3">
-            <div class="hero-card hero-card--book">
-              <img class="hero-card__char" src="assets/cards/char-book.svg" alt="" />
-              <p class="hero-card__label">Истории и&nbsp;движение</p>
-            </div>
-          </div>
-          <div class="hero-slot" style="--i: 4">
-            <div class="hero-card hero-card--animals">
-              <img class="hero-card__char" src="assets/cards/char-animals.svg" alt="" />
-              <p class="hero-card__label">Мир вокруг</p>
-            </div>
-          </div>
+      <div class="hero__photo">
+        <video
+          class="hero__photo-img"
+          src="assets/hero-d/hero-video.mp4"
+          poster="assets/hero-d/hero-video-poster.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        ></video>
+        <div class="hero__contours hero__contours--left" aria-hidden="true">
+          <span class="contour contour--a"><img src="assets/hero-d/contour-2.svg" alt="" /></span>
+          <span class="contour contour--b"><img src="assets/hero-d/contour-1.svg" alt="" /></span>
+        </div>
+        <div class="hero__contours hero__contours--right" aria-hidden="true">
+          <span class="contour contour--c"><img src="assets/hero-d/contour-1.svg" alt="" /></span>
+          <span class="contour contour--d"><img src="assets/hero-d/contour-4.svg" alt="" /></span>
+          <span class="contour contour--e"><img src="assets/hero-d/contour-3.svg" alt="" /></span>
+        </div>
+        <div class="hero__controls">
+          <button class="hero__btn hero__sound" type="button" aria-pressed="false" aria-label="Включить звук" data-hero-sound>
+            <span class="hero__btn-icon hero__sound-icon" aria-hidden="true"></span>
+          </button>
+          <button class="hero__btn hero__fullscreen" type="button" aria-label="Открыть видео на весь экран" data-hero-fullscreen>
+            <span class="hero__btn-icon hero__fullscreen-icon" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
 
@@ -89,7 +80,7 @@
             <span class="mark mark--yellow">Пять кружков</span>
             <span>в&nbsp;одной подписке</span>
           </h2>
-          <div class="games__track" data-games-track>
+          <div class="games__track">
           <article class="game">
             <div class="game__media">
               <video
@@ -113,6 +104,7 @@
                 Ребёнок мастерит, лепит, рисует. Развивает воображение, мелкую моторику и&nbsp;творческое
                 мышление
               </p>
+              <a class="btn game__cta" href="#">Перейти к игре</a>
             </div>
           </article>
           <article class="game">
@@ -138,6 +130,7 @@
                 Ребёнок читает истории, отвечает на&nbsp;вопросы. Улучшает технику чтения и&nbsp;умение передавать
                 эмоции через интонацию
               </p>
+              <a class="btn game__cta" href="#">Перейти к игре</a>
             </div>
           </article>
           <article class="game">
@@ -163,6 +156,7 @@
                 Ребёнок поёт песни, повторяет ритм и&nbsp;слова. Тренирует музыкальный слух, чувство ритма и&nbsp;уверенность
                 в&nbsp;пении
               </p>
+              <a class="btn game__cta" href="#">Перейти к игре</a>
             </div>
           </article>
           <article class="game">
@@ -178,6 +172,7 @@
                 </span>
               </h3>
               <p>Ребёнок читает вслух, рисует и&nbsp;ловит героев руками. Развивает понимание текста и&nbsp;воображение</p>
+              <button class="btn game__cta" type="button" disabled>Перейти к игре</button>
             </div>
           </article>
           <article class="game">
@@ -207,6 +202,7 @@
                 Ребёнок исследует мир животных через рисование, поиск цвета и&nbsp;сказки. Развивает внимание и&nbsp;знания
                 об&nbsp;окружающем мире
               </p>
+              <button class="btn game__cta" type="button" disabled>Перейти к игре</button>
             </div>
           </article>
           </div>
@@ -247,9 +243,10 @@
             </div>
           </div>
         </div>
-      </section>
+              <img class="skills__wave" src="assets/wave-skills.svg" alt="" />
+</section>
 
-      <section class="why" aria-labelledby="why-title">
+      <section class="why" aria-labelledby="why-title" hidden>
         <h2 class="section-title" id="why-title">
           <span>Почему</span>
           <span class="mark mark--yellow">стоит попробовать</span>
@@ -298,10 +295,8 @@
         <img class="mascot__brow mascot__brow--r" src="assets/brow-r.svg" alt="" />
       </div>
     </footer>
-
-    <script src="js/hero-marquee.js?v=20261021j"></script>
-    <script src="js/carousel.js?v=20261021j"></script>
-    <script src="js/videos.js?v=20261021j"></script>
-    <script src="js/reveal.js?v=20261021j"></script>
+    <script src="js/hero-video.js?v=20261022b"></script>
+    <script src="js/videos.js?v=20261022b"></script>
+    <script src="js/reveal.js?v=20261022b"></script>
   </body>
 </html>
