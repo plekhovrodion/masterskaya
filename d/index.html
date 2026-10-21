@@ -21,7 +21,7 @@
     <link rel="preload" href="../fonts/FactorA-Regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="../fonts/FactorA-Bold.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="../fonts/FactorA-Medium.otf" as="font" type="font/otf" crossorigin />
-    <link rel="stylesheet" href="../css/styles.css?v=20261021h" />
+    <link rel="stylesheet" href="../css/styles.css?v=20261021i" />
   </head>
   <body>
     <header class="hero hero--photo">
@@ -60,9 +60,14 @@
           <span class="contour contour--d"><img src="../assets/hero-d/contour-4.svg" alt="" /></span>
           <span class="contour contour--e"><img src="../assets/hero-d/contour-3.svg" alt="" /></span>
         </div>
-        <button class="hero__sound" type="button" aria-pressed="false" aria-label="Включить звук" data-hero-sound>
-          <span class="hero__sound-icon" aria-hidden="true"></span>
-        </button>
+        <div class="hero__controls">
+          <button class="hero__btn hero__sound" type="button" aria-pressed="false" aria-label="Включить звук" data-hero-sound>
+            <span class="hero__btn-icon hero__sound-icon" aria-hidden="true"></span>
+          </button>
+          <button class="hero__btn hero__fullscreen" type="button" aria-label="Открыть видео на весь экран" data-hero-fullscreen>
+            <span class="hero__btn-icon hero__fullscreen-icon" aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
 
       <img class="hero__wave" src="../assets/hero-wave.svg" alt="" />
@@ -284,9 +289,9 @@
         <img class="mascot__brow mascot__brow--r" src="../assets/brow-r.svg" alt="" />
       </div>
     </footer>
-    <script src="../js/hero-video.js?v=20261021h"></script>
-    <script src="../js/carousel.js?v=20261021h"></script>
-    <script src="../js/videos.js?v=20261021h"></script>
-    <script src="../js/reveal.js?v=20261021h"></script>
+    <script src="../js/hero-video.js?v=20261021i"></script>
+    <script src="../js/carousel.js?v=20261021i"></script>
+    <script src="../js/videos.js?v=20261021i"></script>
+    <script src="../js/reveal.js?v=20261021i"></script>
   </body>
 </html>

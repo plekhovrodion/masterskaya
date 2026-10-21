@@ -33,6 +33,36 @@ function startHeroVideo() {
     });
   }
 
+  const fullscreenButton = document.querySelector("[data-hero-fullscreen]");
+  const fullscreenElement = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+  let enteredByButton = false;
+
+  if (fullscreenButton) {
+    fullscreenButton.addEventListener("click", () => {
+      enteredByButton = true;
+      heroVideo.muted = false;
+      heroVideo.controls = true;
+      heroVideo.play().catch(() => {});
+      const request = heroVideo.requestFullscreen
+        ? heroVideo.requestFullscreen()
+        : heroVideo.webkitRequestFullscreen
+          ? heroVideo.webkitRequestFullscreen()
+          : heroVideo.webkitEnterFullscreen && heroVideo.webkitEnterFullscreen();
+      if (request && request.catch) request.catch(() => {});
+    });
+  }
+
+  const leaveFullscreen = () => {
+    if (fullscreenElement() || !enteredByButton) return;
+    enteredByButton = false;
+    heroVideo.controls = false;
+    heroVideo.muted = true;
+    syncSound();
+  };
+  document.addEventListener("fullscreenchange", leaveFullscreen);
+  document.addEventListener("webkitfullscreenchange", leaveFullscreen);
+  heroVideo.addEventListener("webkitendfullscreen", leaveFullscreen);
+
   ["volumechange", "play", "pause"].forEach((name) => heroVideo.addEventListener(name, syncSound));
 
   if ("IntersectionObserver" in window && !reducedMotion.matches) {
