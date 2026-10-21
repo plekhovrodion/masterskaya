@@ -1741,7 +1741,7 @@ p {
 
 .hero--photo {
   height: auto;
-  min-height: 100dvh;
+  min-height: 0;
   gap: 48px;
   padding: 88px 40px 0;
 }
@@ -1765,9 +1765,9 @@ p {
   position: relative;
   z-index: 1;
   align-self: stretch;
-  flex: 1 1 auto;
-  min-height: 300px;
+  flex: none;
   margin-inline: -40px;
+  aspect-ratio: 1280 / 634;
   overflow: hidden;
   container-type: inline-size;
 }
@@ -1778,7 +1778,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 30%;
 }
 
 .hero__contours {
@@ -1856,7 +1856,7 @@ p {
 
 @media (max-width: 767px) {
   .hero--photo {
-    min-height: 100dvh;
+    min-height: 0;
     gap: 32px;
     padding: 88px 16px 0;
   }
@@ -1886,10 +1886,66 @@ p {
   .hero__photo {
     --k: calc(100cqw / 700px);
     margin-inline: -16px;
-    min-height: 280px;
+    aspect-ratio: 360 / 440;
   }
 
   .hero__photo-img {
     object-position: 55% center;
+  }
+}
+
+.hero__sound {
+  position: absolute;
+  right: 24px;
+  bottom: 136px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 20px 0 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--deep);
+  font-family: var(--text);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(54, 47, 115, 0.3);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.hero__sound:hover {
+  transform: translateY(-2px);
+}
+
+.hero__sound:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+.hero__sound-icon {
+  width: 26px;
+  height: 26px;
+  background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 9.5v5h3.6l4.4 3.6V5.9L7.6 9.5H4Z'/%3E%3Cpath d='m16 9.5 5 5m0-5-5 5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.hero__sound[aria-pressed="true"] .hero__sound-icon {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 9.5v5h3.6l4.4 3.6V5.9L7.6 9.5H4Z'/%3E%3Cpath d='M15.5 8.6a4.8 4.8 0 0 1 0 6.8M18 6a8.4 8.4 0 0 1 0 12' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 767px) {
+  .hero__sound {
+    right: 16px;
+    bottom: 84px;
+    height: 44px;
+    padding: 0 16px 0 12px;
   }
 }

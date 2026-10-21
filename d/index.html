@@ -21,7 +21,7 @@
     <link rel="preload" href="../fonts/FactorA-Regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="../fonts/FactorA-Bold.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="../fonts/FactorA-Medium.otf" as="font" type="font/otf" crossorigin />
-    <link rel="stylesheet" href="../css/styles.css?v=20261021f" />
+    <link rel="stylesheet" href="../css/styles.css?v=20261021g" />
   </head>
   <body>
     <header class="hero hero--photo">
@@ -40,7 +40,17 @@
       </div>
 
       <div class="hero__photo">
-        <img class="hero__photo-img" src="../assets/hero-d/hero-image.jpg" alt="" />
+        <video
+          class="hero__photo-img"
+          src="../assets/hero-d/hero-video.mp4"
+          poster="../assets/hero-d/hero-video-poster.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        ></video>
         <div class="hero__contours hero__contours--left" aria-hidden="true">
           <span class="contour contour--a"><img src="../assets/hero-d/contour-2.svg" alt="" /></span>
           <span class="contour contour--b"><img src="../assets/hero-d/contour-1.svg" alt="" /></span>
@@ -50,6 +60,10 @@
           <span class="contour contour--d"><img src="../assets/hero-d/contour-4.svg" alt="" /></span>
           <span class="contour contour--e"><img src="../assets/hero-d/contour-3.svg" alt="" /></span>
         </div>
+        <button class="hero__sound" type="button" aria-pressed="false" aria-label="Включить звук" data-hero-sound>
+          <span class="hero__sound-icon" aria-hidden="true"></span>
+          <span class="hero__sound-label">Включить звук</span>
+        </button>
       </div>
 
       <img class="hero__wave" src="../assets/hero-wave.svg" alt="" />
@@ -271,8 +285,9 @@
         <img class="mascot__brow mascot__brow--r" src="../assets/brow-r.svg" alt="" />
       </div>
     </footer>
-    <script src="../js/carousel.js?v=20261021f"></script>
-    <script src="../js/videos.js?v=20261021f"></script>
-    <script src="../js/reveal.js?v=20261021f"></script>
+    <script src="../js/hero-video.js?v=20261021g"></script>
+    <script src="../js/carousel.js?v=20261021g"></script>
+    <script src="../js/videos.js?v=20261021g"></script>
+    <script src="../js/reveal.js?v=20261021g"></script>
   </body>
 </html>
