@@ -739,7 +739,7 @@ p {
 /* Games */
 
 .games {
-  padding: 80px 40px 40px;
+  padding: 80px 40px 120px;
 }
 
 .games__pin {
@@ -753,7 +753,7 @@ p {
 .games__track {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 144px;
 }
 
 .game {
@@ -880,7 +880,7 @@ main:has(.why[hidden]) .skills {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 40px 40px 80px;
+  padding: 80px 40px 80px;
 }
 
 .skills .section-title {
@@ -1359,7 +1359,7 @@ main:has(.why[hidden]) .skills {
   }
 
   .games {
-    padding: 40px 16px 0;
+    padding: 40px 16px 72px;
   }
 
   .games .section-title {
@@ -1368,7 +1368,7 @@ main:has(.why[hidden]) .skills {
   }
 
   .games__track {
-    gap: 56px;
+    gap: 88px;
   }
 
   .game {
@@ -1430,7 +1430,7 @@ main:has(.why[hidden]) .skills {
   }
 
   .skills {
-    padding: 56px 16px 56px;
+    padding: 72px 16px 56px;
   }
 
   main:has(.why[hidden]) .skills {
