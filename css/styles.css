@@ -1634,6 +1634,12 @@ main:has(.why[hidden]) .skills {
   }
 }
 
+@keyframes mark-wipe-lines {
+  to {
+    background-size: 100% 0.86em;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -1862,6 +1868,12 @@ main:has(.why[hidden]) .skills {
     white-space: normal;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+  }
+
+  .hero--photo h1 .mark--red {
+    background-position: 0 58%;
+    background-size: 0% 0.86em;
+    animation-name: mark-wipe-lines;
   }
 
   .hero__photo {
