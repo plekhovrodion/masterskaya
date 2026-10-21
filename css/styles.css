@@ -1141,13 +1141,6 @@ main:has(.why[hidden]) .skills {
   color: #fff;
 }
 
-.offer__includes strong {
-  display: block;
-  margin-bottom: 4px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-}
 
 /* Footer */
 
@@ -1586,10 +1579,6 @@ main:has(.why[hidden]) .skills {
     font-size: 18px;
   }
 
-  .offer__includes strong {
-    font-size: 20px;
-    line-height: 28px;
-  }
 
   .offer__cloud--left {
     left: -178px;
