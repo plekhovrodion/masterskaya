@@ -675,7 +675,9 @@ p {
 /* Why */
 
 .why {
-  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 40px 200px;
 }
 
 .why .section-title {
@@ -860,7 +862,7 @@ p {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 40px 40px 200px;
+  padding: 40px 40px 80px;
 }
 
 .skills .section-title {
@@ -1298,7 +1300,7 @@ p {
   }
 
   .why {
-    padding: 40px 16px;
+    padding: 40px 16px 140px;
   }
 
   .why .section-title {
@@ -1414,7 +1416,7 @@ p {
   }
 
   .skills {
-    padding: 56px 16px 140px;
+    padding: 56px 16px 56px;
   }
 
   .skills .section-title {
