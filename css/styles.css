@@ -848,8 +848,23 @@ p {
   filter: none;
 }
 
-.why[hidden] {
+.why[hidden],
+.skills[hidden] {
   display: none;
+}
+
+.games {
+  position: relative;
+  overflow: hidden;
+}
+
+main:has(.skills:not([hidden])) .games__wave,
+main:has(.why:not([hidden])) .games__wave {
+  display: none;
+}
+
+main:has(.skills[hidden]):has(.why[hidden]) .games {
+  padding-bottom: 200px;
 }
 
 main:has(.why:not([hidden])) .skills > .skills__wave {
@@ -1430,6 +1445,10 @@ main:has(.why[hidden]) .skills {
     padding-bottom: 140px;
   }
 
+  main:has(.skills[hidden]):has(.why[hidden]) .games {
+    padding-bottom: 140px;
+  }
+
   .skills .section-title {
     margin-bottom: 40px;
     font-size: 56px;
@@ -1845,7 +1864,7 @@ main:has(.why[hidden]) .skills {
   .hero--photo {
     min-height: 0;
     gap: 32px;
-    padding: 88px 16px 0;
+    padding: 88px 16px 72px;
   }
 
   .hero--photo .hero__top {
@@ -1879,7 +1898,7 @@ main:has(.why[hidden]) .skills {
   .hero__photo {
     --k: calc(100cqw / 700px * 0.65);
     margin-inline: -16px;
-    aspect-ratio: 360 / 380;
+    aspect-ratio: 16 / 9;
   }
 
   .hero__photo-img {
@@ -1943,7 +1962,7 @@ main:has(.why[hidden]) .skills {
 
 @media (max-width: 767px) {
   .hero__controls {
-    top: 76px;
+    top: 64px;
     right: 12px;
     gap: 8px;
   }
@@ -1974,6 +1993,6 @@ main:has(.why[hidden]) .skills {
 
 @media (max-width: 767px) {
   .hero--photo h1 {
-    font-size: 62px;
+    font-size: 46px;
   }
 }
