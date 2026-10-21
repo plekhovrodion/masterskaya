@@ -758,7 +758,7 @@ p {
 
 .game {
   display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas: "body media";
   align-items: start;
   gap: 48px;
@@ -807,7 +807,7 @@ p {
   font-family: var(--display);
   font-weight: 800;
   font-size: 56px;
-  line-height: 0.9;
+  line-height: 1.05;
   color: var(--deep);
 }
 
@@ -818,7 +818,7 @@ p {
 
 .game p {
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.65;
   color: var(--deep);
 }
 
@@ -1417,7 +1417,7 @@ main:has(.why[hidden]) .skills {
     flex-direction: column;
     align-items: flex-start;
     font-size: 40px;
-    line-height: 0.9;
+    line-height: 1.05;
   }
 
   .game p {
