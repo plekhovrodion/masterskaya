@@ -1861,6 +1861,10 @@ main:has(.why[hidden]) .skills {
 }
 
 @media (max-width: 767px) {
+  .hero--photo .hero__wave {
+    display: none;
+  }
+
   .hero--photo {
     height: 620px;
     min-height: 0;
