@@ -1862,9 +1862,9 @@ main:has(.why[hidden]) .skills {
 
 @media (max-width: 767px) {
   .hero--photo {
-    height: 760px;
+    height: 584px;
     min-height: 0;
-    gap: 224px;
+    gap: 48px;
     padding: 88px 16px 0;
   }
 
