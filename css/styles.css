@@ -1862,7 +1862,7 @@ main:has(.why[hidden]) .skills {
 
 @media (max-width: 767px) {
   .hero--photo {
-    height: 584px;
+    height: 620px;
     min-height: 0;
     gap: 48px;
     padding: 88px 16px 0;
@@ -1983,17 +1983,17 @@ main:has(.why[hidden]) .skills {
 /* Larger hero headline (variant D) */
 
 .hero--photo h1 {
-  font-size: 100px;
+  font-size: 92px;
 }
 
 @media (max-width: 1100px) {
   .hero--photo h1 {
-    font-size: 78px;
+    font-size: 72px;
   }
 }
 
 @media (max-width: 767px) {
   .hero--photo h1 {
-    font-size: 46px;
+    font-size: 56px;
   }
 }
