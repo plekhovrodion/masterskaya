@@ -1963,7 +1963,7 @@ main:has(.why[hidden]) .skills {
 
 @media (max-width: 767px) {
   .hero__controls {
-    top: 64px;
+    top: 12px;
     right: 12px;
     gap: 8px;
   }
