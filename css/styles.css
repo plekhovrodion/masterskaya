@@ -1982,12 +1982,12 @@ main:has(.why[hidden]) .skills {
 /* Larger hero headline (variant D) */
 
 .hero--photo h1 {
-  font-size: 92px;
+  font-size: 108px;
 }
 
 @media (max-width: 1100px) {
   .hero--photo h1 {
-    font-size: 72px;
+    font-size: 84px;
   }
 }
 
