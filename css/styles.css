@@ -1863,7 +1863,7 @@ main:has(.why[hidden]) .skills {
 @media (max-width: 767px) {
   .hero--photo {
     min-height: 0;
-    gap: 72px;
+    gap: 112px;
     padding: 88px 16px 72px;
   }
 
